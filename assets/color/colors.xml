@@ -1,0 +1,15 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+    <color name="primary_color">#FE554A</color>
+    <color name="background_color">#F7F7FB</color>
+    
+    <color name="gradient_first">#F9881F</color>
+    <color name="gradient_second">#FF774C</color>
+
+    <color name="primary_accent">#0B735F</color>
+    <color name="secondary_accent">#DFE2E6</color>
+    <color name="tertary_accent">#AAACAE</color>
+
+    <color name="gray">#FCFCFC</color>
+
+</resources>
