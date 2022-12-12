@@ -1,9 +1,10 @@
 import 'package:delivero/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:delivero/constants/index.dart';
 
 class SplashScreen extends StatelessWidget {
-  static const String routeName = '/splash';
+  static const routeName = '/';
 
   const SplashScreen({super.key});
 
@@ -14,7 +15,7 @@ class SplashScreen extends StatelessWidget {
         child: Container(
           child: Lottie.asset(
             Assets.lottie.lotte,
-            height: 90,
+            height: IconSizes.avatar,
           ),
         ),
       ),

@@ -1,6 +1,6 @@
-import 'package:delivero/view/splash_screen/splash_page.dart';
-import 'package:delivero/theme/theme.dart';
+import 'package:delivero/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:delivero/theme/theme.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -8,9 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Food App',
       theme: appTheme(),
-      home: const SplashScreen(),
+      onGenerateRoute: Routes.onGenerateRoute,
+      initialRoute: '/',
     );
   }
 }
