@@ -2,6 +2,7 @@
 <resources>
     <color name="primary_color">#FE554A</color>
     <color name="background_color">#F7F7FB</color>
+    <color name="text_button_color">#FE554A</color>
     
     <color name="gradient_first">#F9881F</color>
     <color name="gradient_second">#FF774C</color>
@@ -11,5 +12,8 @@
     <color name="tertary_accent">#AAACAE</color>
 
     <color name="gray">#FCFCFC</color>
+    <color name="white">#FFFFFF</color>
+    <color name ="black">#1C1C1C</color>
+    
 
 </resources>

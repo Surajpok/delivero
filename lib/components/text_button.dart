@@ -1,22 +1,19 @@
 import 'package:delivero/imports.dart';
 
-class MyElevatedButton extends StatelessWidget {
+class MyTextButton extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final double? width;
   final double height;
-  final Gradient gradient;
   final VoidCallback? onPressed;
   final Widget child;
 
-  const MyElevatedButton({
+  const MyTextButton({
     Key? key,
     required this.onPressed,
     required this.child,
     this.borderRadius,
     this.width,
     this.height = 44.0,
-    this.gradient = const LinearGradient(
-        colors: [ColorName.gradientFirst, ColorName.gradientSecond]),
   }) : super(key: key);
 
   @override
@@ -26,17 +23,19 @@ class MyElevatedButton extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        gradient: gradient,
         borderRadius: borderRadius,
       ),
-      child: ElevatedButton(
+      child: TextButton(
         onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
+        style: TextButton.styleFrom(
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
+          foregroundColor: ColorName.textButtonColor,
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
           textStyle: const TextStyle(
-              fontSize: FontSizes.placeholder, fontWeight: FontWeight.w700),
+            fontSize: FontSizes.highlighter,
+            fontWeight: FontWeight.w700,
+          ),
         ),
         child: child,
       ),

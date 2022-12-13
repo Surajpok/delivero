@@ -16,6 +16,9 @@ class ColorName {
   /// Color: #F7F7FB
   static const Color backgroundColor = Color(0xFFF7F7FB);
 
+  /// Color: #1C1C1C
+  static const Color black = Color(0xFF1C1C1C);
+
   /// Color: #F9881F
   static const Color gradientFirst = Color(0xFFF9881F);
 
@@ -36,4 +39,10 @@ class ColorName {
 
   /// Color: #AAACAE
   static const Color tertaryAccent = Color(0xFFAAACAE);
+
+  /// Color: #FE554A
+  static const Color textButtonColor = Color(0xFFFE554A);
+
+  /// Color: #FFFFFF
+  static const Color white = Color(0xFFFFFFFF);
 }

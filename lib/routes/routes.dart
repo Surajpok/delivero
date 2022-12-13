@@ -1,4 +1,5 @@
 import 'package:delivero/view/splash_screen/splash_page.dart';
+
 import 'package:flutter/material.dart';
 import 'package:delivero/view/home_screen/home_page.dart';
 import 'package:delivero/view/intro_screen/intro.dart';

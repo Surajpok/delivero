@@ -1,12 +1,31 @@
-import 'package:delivero/gen/assets.gen.dart';
-import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:delivero/imports.dart';
 import 'package:lottie/lottie.dart';
-import 'package:delivero/constants/index.dart';
 
-class SplashScreen extends StatelessWidget {
-  static const routeName = '/';
+class SplashScreen extends StatefulWidget {
+  static const String routeName = '/';
 
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState;
+    startTimer();
+  }
+
+  startTimer() {
+    var duration = const Duration(seconds: 2);
+    return Timer(duration, route);
+  }
+
+  route() {
+    Navigator.pushReplacementNamed(context, "/intro");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +33,7 @@ class SplashScreen extends StatelessWidget {
       body: Center(
         child: Container(
           child: Lottie.asset(
-            Assets.lottie.lotte,
+            Assets.lottie.lotte.path,
             height: IconSizes.avatar,
           ),
         ),

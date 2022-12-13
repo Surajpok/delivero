@@ -1,3 +1,5 @@
+import 'dimens.dart';
+
 class Margins {
   Margins._();
 
@@ -38,6 +40,7 @@ class FontSizes {
   static const double regular = 11.0;
   static const double label = 12.0;
   static const double placeholder = 14.0;
+  static const double intro = 18.0;
 }
 
 class RadiusSize {
@@ -49,13 +52,13 @@ class RadiusSize {
   static const bottomMenuBorderRadius = 30.0;
 }
 
-// class UiSize {
-//   UiSize._();
+class UiSize {
+  UiSize._();
 
-//   static const double calendarTileHeight = 150;
-//   static const double bottomSheetTopIconWidth = 42;
-//   static const double bottomSheetTopIconHeight = 15;
-// }
+  static const double sizedBoxWidth = 30;
+  static const double bottomSheetTopIconWidth = 42;
+  static const double bottomSheetTopIconHeight = 15;
+}
 
 class LineHeight {
   LineHeight._();
