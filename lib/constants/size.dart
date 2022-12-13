@@ -10,7 +10,7 @@ class Paddings {
 
   static const double minimum = 8.0;
   static const double normal = 16.0;
-  static const double content = 40.0;
+  static const double content = 30.0;
 }
 
 class IconSizes {

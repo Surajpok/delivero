@@ -1,3 +1,4 @@
+import 'package:delivero/components/icon_button.dart';
 import 'package:delivero/imports.dart';
 import 'package:delivero/view/intro_screen/intro_slide2.dart';
 import 'package:delivero/view/intro_screen/intro_slide3.dart';
@@ -75,7 +76,7 @@ class _IntroState extends State<Intro> {
                 onPressed: () {
                   Navigator.pushNamed(context, '/home');
                 },
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(RadiusSize.buttonRadius),
                 child: const Text('Login'),
               ),
             ),

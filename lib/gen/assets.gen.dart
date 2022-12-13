@@ -51,6 +51,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/burger.png
   AssetGenImage get burger => const AssetGenImage('assets/images/burger.png');
 
+  /// File path: assets/images/google.png
+  AssetGenImage get google => const AssetGenImage('assets/images/google.png');
+
   /// File path: assets/images/introimg0.png
   AssetGenImage get introimg0 =>
       const AssetGenImage('assets/images/introimg0.png');
@@ -64,7 +67,8 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/introimg2.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [burger, introimg0, introimg1, introimg2];
+  List<AssetGenImage> get values =>
+      [burger, google, introimg0, introimg1, introimg2];
 }
 
 class $AssetsLottieGen {
