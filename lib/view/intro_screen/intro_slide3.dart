@@ -39,21 +39,24 @@ class IntroSlide3 extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: ScreenSize.screenHeight * 0.05,
+            height: ScreenSize.screenHeight * UiSize.sizedBoxHeight,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 20.0, right: 20.0),
+            padding: EdgeInsets.only(
+              left: Paddings.content,
+              right: Paddings.content,
+            ),
             child: Text(
               'Order from your favourite stores or vendors',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 24,
+                  fontSize: FontSizes.headline1,
                   color: ColorName.black,
                   fontWeight: FontWeight.w700),
             ),
           ),
           SizedBox(
-            height: ScreenSize.screenHeight * 0.03,
+            height: ScreenSize.screenHeight * UiSize.sizedBoxHeight,
           ),
           Image.asset(
             Assets.images.introimg2.path,

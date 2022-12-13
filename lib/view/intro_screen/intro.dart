@@ -56,15 +56,11 @@ class _IntroState extends State<Intro> {
             bottom: ScreenSize.screenHeight * 0.2,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: SizedBox(
+              child: MyElevatedButton(
                 width: double.infinity,
-                height: ScreenSize.screenHeight * 0.07,
-                child: MyElevatedButton(
-                  width: double.infinity,
-                  onPressed: () {},
-                  borderRadius: BorderRadius.circular(20),
-                  child: const Text('Create An Account'),
-                ),
+                onPressed: () {},
+                borderRadius: BorderRadius.circular(RadiusSize.buttonRadius),
+                child: const Text('Create An Account'),
               ),
             ),
           ),
@@ -74,17 +70,13 @@ class _IntroState extends State<Intro> {
             bottom: ScreenSize.screenHeight * 0.11,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: SizedBox(
+              child: MyTextButton(
                 width: double.infinity,
-                height: ScreenSize.screenHeight * 0.07,
-                child: MyTextButton(
-                  width: double.infinity,
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/home');
-                  },
-                  borderRadius: BorderRadius.circular(20),
-                  child: const Text('Login'),
-                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home');
+                },
+                borderRadius: BorderRadius.circular(20),
+                child: const Text('Login'),
               ),
             ),
           ),

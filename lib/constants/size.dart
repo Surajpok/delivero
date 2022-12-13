@@ -1,19 +1,17 @@
-import 'dimens.dart';
-
-class Margins {
-  Margins._();
-
-  static const double minimum = 8.0;
-  static const double normal = 20.0;
-}
-
-// class Paddings {
-//   Paddings._();
+// class Margins {
+//   Margins._();
 
 //   static const double minimum = 8.0;
-//   static const double normal = 16.0;
-//   static const double content = 20.0;
+//   static const double normal = 20.0;
 // }
+
+class Paddings {
+  Paddings._();
+
+  static const double minimum = 8.0;
+  static const double normal = 16.0;
+  static const double content = 40.0;
+}
 
 class IconSizes {
   IconSizes._();
@@ -48,7 +46,6 @@ class RadiusSize {
 
   static const double containerRadius = 30.0;
   static const buttonRadius = 20.0;
-
   static const bottomMenuBorderRadius = 30.0;
 }
 
@@ -56,6 +53,7 @@ class UiSize {
   UiSize._();
 
   static const double sizedBoxWidth = 30;
+  static const double sizedBoxHeight = 0.05;
   static const double bottomSheetTopIconWidth = 42;
   static const double bottomSheetTopIconHeight = 15;
 }
