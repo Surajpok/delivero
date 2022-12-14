@@ -1,4 +1,3 @@
-import 'package:delivero/components/icon_button.dart';
 import 'package:delivero/imports.dart';
 import 'package:delivero/view/intro_screen/intro_slide2.dart';
 import 'package:delivero/view/intro_screen/intro_slide3.dart';

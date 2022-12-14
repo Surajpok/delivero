@@ -14,7 +14,7 @@ class Routes {
 
       case '/home':
         return MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => HomeScreen(),
         );
 
       case '/intro':

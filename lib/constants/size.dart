@@ -1,15 +1,15 @@
-// class Margins {
-//   Margins._();
+class Margins {
+  Margins._();
 
-//   static const double minimum = 8.0;
-//   static const double normal = 20.0;
-// }
+  static const double minimum = 8.0;
+  static const double normal = 20.0;
+}
 
 class Paddings {
   Paddings._();
 
-  static const double minimum = 8.0;
-  static const double normal = 16.0;
+  static const double minimum = 10.0;
+  static const double normal = 20.0;
   static const double content = 30.0;
 }
 
@@ -17,6 +17,7 @@ class IconSizes {
   IconSizes._();
 
   static const double avatar = 40.0;
+  static const double categoryItem = 35.0;
   static const double settingsItem = 20.0;
   static const double themeDialogIconSize = 22.0;
 }
@@ -47,6 +48,8 @@ class RadiusSize {
   static const double containerRadius = 30.0;
   static const buttonRadius = 20.0;
   static const bottomMenuBorderRadius = 30.0;
+  static const categoryBorderRadius = 50.0;
+  static const cardBorderRadius = 50.0;
 }
 
 class UiSize {
@@ -54,8 +57,12 @@ class UiSize {
 
   static const double sizedBoxWidth = 30;
   static const double sizedBoxHeight = 0.05;
-  static const double bottomSheetTopIconWidth = 42;
-  static const double bottomSheetTopIconHeight = 15;
+
+  static const double sizedBoxPaddingHeight = 0.03;
+
+  static const double categoryBoxHeight = 0.17;
+  static const double categoryBoxWidth = 0.23;
+  static const double categoryBoxInnerWidth = 0.20;
 }
 
 class LineHeight {
