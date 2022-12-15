@@ -20,7 +20,7 @@ class IntroSlide2 extends StatelessWidget {
               Expanded(
                 child: Image.asset(
                   Assets.icons.icon.path,
-                  height: IconSizes.avatar,
+                  height: IconSizes.topIcon,
                 ),
               ),
               Expanded(

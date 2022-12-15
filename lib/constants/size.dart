@@ -15,8 +15,8 @@ class Paddings {
 
 class IconSizes {
   IconSizes._();
-
-  static const double avatar = 70.0;
+  static const double topIcon = 30.0;
+  static const double avatar = 50.0;
   static const double categoryItem = 35.0;
   static const double appBarItem = 30.0;
 }

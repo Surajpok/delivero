@@ -30,7 +30,7 @@ class ProductCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(Paddings.normal),
       decoration: const BoxDecoration(
-        color: ColorName.backgroundColor,
+        color: ColorName.white,
         borderRadius: BorderRadius.all(
           Radius.circular(RadiusSize.cardBorderRadius),
         ),

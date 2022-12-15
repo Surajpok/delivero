@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SliverPadding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               sliver: SliverList(
                 delegate: SliverChildBuilderDelegate(
                   ((context, index) => _buildBody(context)),
