@@ -16,10 +16,9 @@ class Paddings {
 class IconSizes {
   IconSizes._();
 
-  static const double avatar = 40.0;
+  static const double avatar = 70.0;
   static const double categoryItem = 35.0;
-  static const double settingsItem = 20.0;
-  static const double themeDialogIconSize = 22.0;
+  static const double appBarItem = 30.0;
 }
 
 // class ContainerSizes {
@@ -63,6 +62,14 @@ class UiSize {
   static const double categoryBoxHeight = 0.17;
   static const double categoryBoxWidth = 0.23;
   static const double categoryBoxInnerWidth = 0.20;
+
+  static const double productCardHeight = 0.23;
+  static const double productCardWidth = 0.23;
+
+  static const double productImageWidth = 0.45;
+  static const double productIconWidth = 0.04;
+
+  static const double bottomNavHeight = 80;
 }
 
 class LineHeight {

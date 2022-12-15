@@ -1,8 +1,13 @@
 export 'package:delivero/constants/index.dart';
 export 'package:delivero/gen/index.dart';
 export 'package:flutter/material.dart';
-export 'package:delivero/components/text_button.dart';
-export 'package:delivero/components/elevated_button_primary.dart';
-export 'package:delivero/components/elevated_button_secondary.dart';
-export 'package:delivero/view/categories/category.dart';
+export 'package:delivero/components/buttons/elevated_button_primary.dart';
+export 'package:delivero/components/buttons/elevated_button_primary.dart';
+export 'package:delivero/components/buttons/elevated_button_secondary.dart';
+export 'package:delivero/components/categories/category.dart';
+export 'package:delivero/components/popular/popular_page.dart';
 export 'package:delivero/components/product_card.dart';
+export 'package:delivero/components/buttons/text_button.dart';
+export 'package:delivero/view/bottom_nav/bottom_nav.dart';
+export 'package:delivero/constants/font_icons.dart';
+export 'package:delivero/components/top_menu/top_menu.dart';

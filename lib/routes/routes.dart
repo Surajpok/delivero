@@ -1,3 +1,4 @@
+import 'package:delivero/imports.dart';
 import 'package:delivero/view/splash_screen/splash_page.dart';
 
 import 'package:flutter/material.dart';
@@ -20,6 +21,10 @@ class Routes {
       case '/intro':
         return MaterialPageRoute(
           builder: (context) => const Intro(),
+        );
+      case '/bottom_nav':
+        return MaterialPageRoute(
+          builder: (context) => const BottomNav(),
         );
     }
     return null;

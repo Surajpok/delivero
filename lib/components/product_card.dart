@@ -3,7 +3,7 @@ import 'package:delivero/imports.dart';
 class ProductCard extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final double width;
-  final double height;
+  final double imagewidth;
   final String image;
   final String title;
   final String desc;
@@ -15,13 +15,13 @@ class ProductCard extends StatelessWidget {
     Key? key,
     required this.onTap,
     this.borderRadius,
-    this.width = 0,
-    this.height = 44.0,
+    required this.width,
+    required this.imagewidth,
     // required this.child,
-    this.title = '',
-    this.desc = '',
-    this.image = '',
-    this.star = 0.0,
+    required this.title,
+    required this.desc,
+    required this.image,
+    required this.star,
   }) : super(key: key);
 
   @override
@@ -30,7 +30,7 @@ class ProductCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(Paddings.normal),
       decoration: const BoxDecoration(
-        color: ColorName.gradientFirst,
+        color: ColorName.backgroundColor,
         borderRadius: BorderRadius.all(
           Radius.circular(RadiusSize.cardBorderRadius),
         ),
@@ -40,7 +40,7 @@ class ProductCard extends StatelessWidget {
         children: [
           Image.asset(
             image,
-            width: 400,
+            width: imagewidth,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +48,7 @@ class ProductCard extends StatelessWidget {
               Text(
                 title,
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: FontSizes.headline2,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -58,7 +58,7 @@ class ProductCard extends StatelessWidget {
               Text(
                 desc,
                 style: const TextStyle(
-                  fontSize: 14,
+                  fontSize: FontSizes.headline3,
                   fontWeight: FontWeight.normal,
                 ),
                 maxLines: 2,
@@ -68,23 +68,28 @@ class ProductCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const Icon(
-                    Icons.star,
-                    color: Colors.orange,
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.star,
+                        color: ColorName.gradientFirst,
+                      ),
+                      Text(
+                        star.toString(),
+                        style: const TextStyle(
+                          fontSize: FontSizes.headline3,
+                        ),
+                      ),
+                    ],
                   ),
-                  Text(
-                    star.toString(),
-                    style: const TextStyle(
-                      fontSize: 14,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 100,
+                  const Expanded(
+                    flex: 1,
+                    child: SizedBox(),
                   ),
                   Image.asset(
-                    './assets/icons/heart.png',
+                    Assets.icons.heart.path,
                     fit: BoxFit.cover,
-                    width: 18,
+                    width: ScreenSize.screenWidth * UiSize.productIconWidth,
                   ),
                 ],
               ),
