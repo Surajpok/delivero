@@ -58,7 +58,9 @@ class _PopularPageState extends State<PopularPage> {
                   ),
                 ),
                 child: ProductCard(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, '/details');
+                  },
                   title: PopularProduct.products[index].title,
                   desc: PopularProduct.products[index].desc,
                   image: PopularProduct.products[index].image,

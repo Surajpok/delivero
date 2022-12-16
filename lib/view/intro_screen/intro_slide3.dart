@@ -26,7 +26,7 @@ class IntroSlide3 extends StatelessWidget {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/bottom_nav');
                   },
                   child: const Text(
                     'skip',

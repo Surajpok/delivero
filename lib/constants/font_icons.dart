@@ -8,4 +8,5 @@ class MyIcons {
   static const search = IconlyLight.search;
   static const bell = IconlyLight.notification;
   static const cart = IconlyLight.buy;
+  static const back = IconlyLight.arrow_left;
 }

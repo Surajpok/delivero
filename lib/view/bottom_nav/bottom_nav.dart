@@ -1,6 +1,7 @@
 import 'package:delivero/imports.dart';
 import 'package:delivero/view/home_screen/home_page.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
+import 'package:delivero/view/product_detail/food_details.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -91,7 +92,7 @@ class _BottomNavState extends State<BottomNav> {
         },
         children: const [
           HomeScreen(),
-          HomeScreen(),
+          FoodDetails(),
           HomeScreen(),
           HomeScreen(),
           HomeScreen(),

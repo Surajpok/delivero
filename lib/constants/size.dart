@@ -19,6 +19,7 @@ class IconSizes {
   static const double avatar = 50.0;
   static const double categoryItem = 35.0;
   static const double appBarItem = 30.0;
+  static const double smallIcon = 20.0;
 }
 
 // class ContainerSizes {
@@ -45,10 +46,17 @@ class RadiusSize {
   RadiusSize._();
 
   static const double containerRadius = 30.0;
+
   static const buttonRadius = 20.0;
+  static const roundButtonRadius = 50.0;
+
   static const bottomMenuBorderRadius = 30.0;
+
   static const categoryBorderRadius = 50.0;
+
   static const cardBorderRadius = 50.0;
+
+  static const singleProductBorderRadius = 20.0;
 }
 
 class UiSize {
@@ -65,6 +73,9 @@ class UiSize {
 
   static const double productCardHeight = 0.23;
   static const double productCardWidth = 0.23;
+
+  static const double singleProductCardHeight = 0.25;
+  static const double singleProductCardWidth = 0.70;
 
   static const double productImageWidth = 0.45;
   static const double productIconWidth = 0.04;

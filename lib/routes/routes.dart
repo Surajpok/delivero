@@ -1,4 +1,5 @@
 import 'package:delivero/imports.dart';
+import 'package:delivero/view/product_detail/food_details.dart';
 import 'package:delivero/view/splash_screen/splash_page.dart';
 
 import 'package:flutter/material.dart';
@@ -25,6 +26,10 @@ class Routes {
       case '/bottom_nav':
         return MaterialPageRoute(
           builder: (context) => const BottomNav(),
+        );
+      case '/details':
+        return MaterialPageRoute(
+          builder: (context) => const FoodDetails(),
         );
     }
     return null;

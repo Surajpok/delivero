@@ -35,67 +35,70 @@ class ProductCard extends StatelessWidget {
           Radius.circular(RadiusSize.cardBorderRadius),
         ),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Image.asset(
-            image,
-            width: imagewidth,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: FontSizes.headline2,
-                  fontWeight: FontWeight.w700,
+      child: InkWell(
+        onTap: onTap,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Image.asset(
+              image,
+              width: imagewidth,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: FontSizes.headline2,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                desc,
-                style: const TextStyle(
-                  fontSize: FontSizes.headline3,
-                  fontWeight: FontWeight.normal,
+                const SizedBox(
+                  height: 10,
                 ),
-                maxLines: 2,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: [
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.star,
-                        color: ColorName.gradientFirst,
-                      ),
-                      Text(
-                        star.toString(),
-                        style: const TextStyle(
-                          fontSize: FontSizes.headline3,
+                Text(
+                  desc,
+                  style: const TextStyle(
+                    fontSize: FontSizes.headline3,
+                    fontWeight: FontWeight.normal,
+                  ),
+                  maxLines: 2,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.star,
+                          color: ColorName.gradientFirst,
                         ),
-                      ),
-                    ],
-                  ),
-                  const Expanded(
-                    flex: 1,
-                    child: SizedBox(),
-                  ),
-                  Image.asset(
-                    Assets.icons.heart.path,
-                    fit: BoxFit.cover,
-                    width: ScreenSize.screenWidth * UiSize.productIconWidth,
-                  ),
-                ],
-              ),
-            ],
-          )
-        ],
+                        Text(
+                          star.toString(),
+                          style: const TextStyle(
+                            fontSize: FontSizes.headline3,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Expanded(
+                      flex: 1,
+                      child: SizedBox(),
+                    ),
+                    Image.asset(
+                      Assets.icons.heart.path,
+                      fit: BoxFit.cover,
+                      width: ScreenSize.screenWidth * UiSize.productIconWidth,
+                    ),
+                  ],
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
