@@ -92,7 +92,7 @@ class _BottomNavState extends State<BottomNav> {
         },
         children: const [
           HomeScreen(),
-          FoodDetails(),
+          HomeScreen(),
           HomeScreen(),
           HomeScreen(),
           HomeScreen(),

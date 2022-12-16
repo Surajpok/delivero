@@ -73,7 +73,7 @@ class _IntroState extends State<Intro> {
               child: MyTextButton(
                 width: double.infinity,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.pushNamed(context, '/bottom_nav');
                 },
                 borderRadius: BorderRadius.circular(RadiusSize.buttonRadius),
                 child: const Text('Login'),

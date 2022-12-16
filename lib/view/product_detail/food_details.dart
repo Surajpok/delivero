@@ -1,4 +1,3 @@
-import 'package:delivero/view/home_screen/home_page.dart';
 import 'package:delivero/imports.dart';
 import 'package:expandable_text/expandable_text.dart';
 
