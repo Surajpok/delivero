@@ -20,6 +20,8 @@ class IconSizes {
   static const double categoryItem = 35.0;
   static const double appBarItem = 30.0;
   static const double smallIcon = 20.0;
+
+  static const double successImage = 300.0;
 }
 
 // class ContainerSizes {
@@ -56,6 +58,8 @@ class RadiusSize {
 
   static const cardBorderRadius = 50.0;
 
+  static const counterBorderRadius = 100.0;
+
   static const singleProductBorderRadius = 20.0;
 }
 
@@ -66,6 +70,7 @@ class UiSize {
   static const double sizedBoxHeight = 0.05;
 
   static const double sizedBoxPaddingHeight = 0.03;
+  static const double sizedBoxSmallPaddingHeight = 0.02;
 
   static const double categoryBoxHeight = 0.17;
   static const double categoryBoxWidth = 0.23;

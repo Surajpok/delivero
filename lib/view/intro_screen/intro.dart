@@ -51,29 +51,33 @@ class _IntroState extends State<Intro> {
             ),
           ),
           Positioned(
-            width: ScreenSize.screenWidth * 1,
-            height: ScreenSize.screenHeight * 0.07,
+            right: 0,
+            left: 0,
             bottom: ScreenSize.screenHeight * 0.2,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: MyElevatedButton(
+                height: ScreenSize.screenHeight * 0.07,
                 width: double.infinity,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/signup');
+                },
                 borderRadius: BorderRadius.circular(RadiusSize.buttonRadius),
                 child: const Text('Create An Account'),
               ),
             ),
           ),
           Positioned(
-            width: MediaQuery.of(context).size.width,
-            height: ScreenSize.screenHeight * 0.07,
+            right: 0,
+            left: 0,
             bottom: ScreenSize.screenHeight * 0.11,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: MyTextButton(
+                height: ScreenSize.screenHeight * 0.07,
                 width: double.infinity,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/bottom_nav');
+                  Navigator.pushNamed(context, '/login');
                 },
                 borderRadius: BorderRadius.circular(RadiusSize.buttonRadius),
                 child: const Text('Login'),

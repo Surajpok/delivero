@@ -12,3 +12,5 @@ export 'package:delivero/components/bottom_nav/bottom_nav.dart';
 export 'package:delivero/constants/font_icons.dart';
 export 'package:delivero/components/header/top_menu.dart';
 export 'package:delivero/components/header/app_bar.dart';
+export 'package:delivero/components/text_field/text_field.dart';
+export 'package:delivero/components/cart_product/cart_product.dart';

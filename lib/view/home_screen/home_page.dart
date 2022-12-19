@@ -1,3 +1,4 @@
+import 'package:delivero/components/header/header_drawer.dart';
 import 'package:delivero/imports.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
                 right: Paddings.minimum,
               ),
               sliver: SliverAppBar(
-                automaticallyImplyLeading: false,
+                // automaticallyImplyLeading: false,
                 pinned: true,
                 flexibleSpace: TopMenu(),
               ),
@@ -31,6 +32,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
+        drawer: HeaderDrawer(),
       ),
     );
   }

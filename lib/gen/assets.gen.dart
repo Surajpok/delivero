@@ -66,9 +66,12 @@ class $AssetsImagesGen {
   AssetGenImage get introimg2 =>
       const AssetGenImage('assets/images/introimg2.png');
 
+  /// File path: assets/images/success.png
+  AssetGenImage get success => const AssetGenImage('assets/images/success.png');
+
   /// List of all assets
   List<AssetGenImage> get values =>
-      [burger, google, introimg0, introimg1, introimg2];
+      [burger, google, introimg0, introimg1, introimg2, success];
 }
 
 class $AssetsLottieGen {
