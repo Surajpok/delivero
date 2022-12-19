@@ -107,7 +107,7 @@ Widget _buldFloatBar(BuildContext context) {
               width: double.infinity,
               height: ScreenSize.screenHeight * 0.07,
               onPressed: () {
-                Navigator.pushNamed(context, '/payment_details');
+                Navigator.pushNamed(context, '/deliver');
               },
               borderRadius: BorderRadius.circular(RadiusSize.buttonRadius),
               child: const Text('Procees to payment'),

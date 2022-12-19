@@ -22,6 +22,7 @@ class IconSizes {
   static const double smallIcon = 20.0;
 
   static const double successImage = 300.0;
+  static const double deliverImage = 80.0;
 }
 
 // class ContainerSizes {

@@ -13,6 +13,10 @@ import 'package:lottie/lottie.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/addcircle.png
+  AssetGenImage get addcircle =>
+      const AssetGenImage('assets/icons/addcircle.png');
+
   /// File path: assets/icons/avatar.png
   AssetGenImage get avatar => const AssetGenImage('assets/icons/avatar.png');
 
@@ -25,8 +29,15 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon.png
   AssetGenImage get icon => const AssetGenImage('assets/icons/icon.png');
 
+  /// File path: assets/icons/mastercard.png
+  AssetGenImage get mastercard =>
+      const AssetGenImage('assets/icons/mastercard.png');
+
   /// File path: assets/icons/menu.png
   AssetGenImage get menu => const AssetGenImage('assets/icons/menu.png');
+
+  /// File path: assets/icons/paypal.png
+  AssetGenImage get paypal => const AssetGenImage('assets/icons/paypal.png');
 
   /// File path: assets/icons/pizza.png
   AssetGenImage get pizza => const AssetGenImage('assets/icons/pizza.png');
@@ -40,9 +51,25 @@ class $AssetsIconsGen {
   /// File path: assets/icons/search.png
   AssetGenImage get search => const AssetGenImage('assets/icons/search.png');
 
+  /// File path: assets/icons/stripe.png
+  AssetGenImage get stripe => const AssetGenImage('assets/icons/stripe.png');
+
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [avatar, burger, heart, icon, menu, pizza, samosha, sausage, search];
+  List<AssetGenImage> get values => [
+        addcircle,
+        avatar,
+        burger,
+        heart,
+        icon,
+        mastercard,
+        menu,
+        paypal,
+        pizza,
+        samosha,
+        sausage,
+        search,
+        stripe
+      ];
 }
 
 class $AssetsImagesGen {

@@ -104,11 +104,11 @@ class ForgotPassword extends StatelessWidget {
                                 height: ScreenSize.screenHeight * 0.07,
                                 width: double.infinity,
                                 onPressed: () {
-                                  Navigator.pushNamed(context, '/signup');
+                                  Navigator.pushNamed(context, '/otp');
                                 },
                                 borderRadius: BorderRadius.circular(
                                     RadiusSize.buttonRadius),
-                                child: const Text('Create An Account'),
+                                child: const Text('Get Code'),
                               ),
                             ),
                             const SizedBox(
