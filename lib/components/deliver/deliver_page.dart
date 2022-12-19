@@ -212,22 +212,6 @@ Widget _buildBody(BuildContext context) {
       SizedBox(
         height: ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight,
       ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          Text(
-            "Total",
-            style: TextStyle(fontSize: FontSizes.highlighter),
-          ),
-          Text(
-            "Rs.520",
-            style: TextStyle(
-              fontSize: FontSizes.headline1,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ],
-      ),
     ],
   );
 }
@@ -241,6 +225,29 @@ Widget _buldFloatBar(BuildContext context) {
       padding: const EdgeInsets.symmetric(horizontal: Paddings.content),
       child: Column(
         children: [
+          const Divider(
+            color: ColorName.black,
+            thickness: 1,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                "Total",
+                style: TextStyle(fontSize: FontSizes.highlighter),
+              ),
+              Text(
+                "Rs.520",
+                style: TextStyle(
+                  fontSize: FontSizes.headline1,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight,
+          ),
           SizedBox(
             child: MyElevatedButton(
               width: double.infinity,

@@ -13,7 +13,7 @@ class ForgotPassword extends StatelessWidget {
               children: [
                 const Expanded(
                   child: SizedBox(
-                    width: 30,
+                    width: UiSize.sizedBoxWidth,
                   ),
                 ),
                 Expanded(
@@ -36,44 +36,49 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            SizedBox(
+              height: ScreenSize.screenHeight * UiSize.sizedBoxHeight,
+            ),
             Column(
               children: [
                 Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40.0),
-                      topRight: Radius.circular(40.0),
+                      topLeft: Radius.circular(RadiusSize.containerRadius),
+                      topRight: Radius.circular(RadiusSize.containerRadius),
                     ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 16.0, horizontal: 32),
+                        vertical: Paddings.content,
+                        horizontal: Paddings.content),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Text(
                           "Forgot Password",
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: FontSizes.headline1,
                             fontWeight: FontWeight.w700,
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: ColorName.black,
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: ScreenSize.screenHeight *
+                              UiSize.sizedBoxPaddingHeight,
                         ),
                         const Text(
                           "Enter your email address to request a password reset.",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: FontSizes.headline3,
                             fontWeight: FontWeight.normal,
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: ColorName.black,
                           ),
                         ),
-                        const SizedBox(
-                          height: 50,
+                        SizedBox(
+                          height:
+                              ScreenSize.screenHeight * UiSize.sizedBoxHeight,
                         ),
                         Column(
                           children: [
@@ -82,20 +87,23 @@ class ForgotPassword extends StatelessWidget {
                               child: Text(
                                 "Email Address",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: FontSizes.headline3,
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: 10,
+                            SizedBox(
+                              height: ScreenSize.screenHeight *
+                                  UiSize.sizedBoxSmallPaddingHeight,
                             ),
                             TextFormField(
                               decoration: const InputDecoration(
                                 hintText: "Enter your email",
                               ),
                             ),
-                            const SizedBox(
-                              height: 80.0,
+                            SizedBox(
+                              height: ScreenSize.screenHeight *
+                                  UiSize.sizedBoxHeight *
+                                  2,
                             ),
                             SizedBox(
                               width: double.infinity,
@@ -111,8 +119,9 @@ class ForgotPassword extends StatelessWidget {
                                 child: const Text('Get Code'),
                               ),
                             ),
-                            const SizedBox(
-                              height: 20.0,
+                            SizedBox(
+                              height: ScreenSize.screenHeight *
+                                  UiSize.sizedBoxPaddingHeight,
                             ),
                             SizedBox(
                               width: double.infinity,

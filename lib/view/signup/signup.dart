@@ -44,7 +44,7 @@ class SignUp extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                      vertical: 16.0, horizontal: 32),
+                      vertical: 16.0, horizontal: Paddings.content),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -77,7 +77,7 @@ class SignUp extends StatelessWidget {
                             child: Text(
                               "Email Address",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: FontSizes.headline3,
                               ),
                             ),
                           ),
@@ -99,7 +99,7 @@ class SignUp extends StatelessWidget {
                             child: Text(
                               "Password",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: FontSizes.headline3,
                               ),
                             ),
                           ),
@@ -112,28 +112,31 @@ class SignUp extends StatelessWidget {
                               hintText: "Enter Password",
                             ),
                           ),
-                          const SizedBox(
-                            height: 30.0,
+                          SizedBox(
+                            height: ScreenSize.screenHeight *
+                                UiSize.sizedBoxPaddingHeight,
                           ),
                           const Align(
                             alignment: Alignment.topLeft,
                             child: Text(
                               "Conform Passwoed",
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: FontSizes.headline3,
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: ScreenSize.screenHeight *
+                                UiSize.sizedBoxSmallPaddingHeight,
                           ),
                           TextFormField(
                             decoration: const InputDecoration(
                               hintText: "Conform password",
                             ),
                           ),
-                          const SizedBox(
-                            height: 80.0,
+                          SizedBox(
+                            height:
+                                ScreenSize.screenHeight * UiSize.sizedBoxHeight,
                           ),
                           SizedBox(
                             width: double.infinity,
@@ -149,8 +152,9 @@ class SignUp extends StatelessWidget {
                               child: const Text('Create an account'),
                             ),
                           ),
-                          const SizedBox(
-                            height: 20.0,
+                          SizedBox(
+                            height: ScreenSize.screenHeight *
+                                UiSize.sizedBoxPaddingHeight,
                           ),
                           SizedBox(
                             width: double.infinity,
