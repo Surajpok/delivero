@@ -44,7 +44,7 @@ class Routes {
         );
       case '/login':
         return MaterialPageRoute(
-          builder: (context) => const LoginPage(),
+          builder: (context) => LoginPage(),
         );
       case '/signup':
         return MaterialPageRoute(
@@ -60,7 +60,7 @@ class Routes {
         );
       case '/payment_details':
         return MaterialPageRoute(
-          builder: (context) => const PaymentDetails(),
+          builder: (context) => PaymentDetails(),
         );
       case '/payment_success':
         return MaterialPageRoute(

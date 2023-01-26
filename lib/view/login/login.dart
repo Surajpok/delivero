@@ -1,7 +1,9 @@
 import 'package:delivero/imports.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  LoginPage({super.key});
   static const String routeName = '/login';
 
   @override
@@ -100,10 +102,12 @@ class LoginPage extends StatelessWidget {
                               height: ScreenSize.screenHeight *
                                   UiSize.sizedBoxSmallPaddingHeight,
                             ),
-                            TextFormField(
-                              decoration: const InputDecoration(
-                                hintText: "Enter email",
-                              ),
+                            CustomTextInput(
+                              textEditController: _emailController,
+                              hintTextString: 'Enter Your Email',
+                              inputType: InputType.Email,
+                              enableBorder: true,
+                              maxLength: 24,
                             ),
                             SizedBox(
                               height: ScreenSize.screenHeight *
@@ -121,10 +125,14 @@ class LoginPage extends StatelessWidget {
                             const SizedBox(
                               height: 10,
                             ),
-                            TextFormField(
-                              decoration: const InputDecoration(
-                                hintText: "Password",
-                              ),
+                            CustomTextInput(
+                              textEditController: _passwordController,
+                              hintTextString: 'Enter Password',
+                              inputType: InputType.Password,
+                              enableBorder: true,
+                              maxLength: 16,
+                              prefixIcon: Icon(Icons.lock,
+                                  color: Theme.of(context).primaryColor),
                             ),
                             Align(
                               alignment: Alignment.centerRight,

@@ -1,6 +1,9 @@
 import 'package:delivero/imports.dart';
 
 class SignUp extends StatelessWidget {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _rePasswordController = TextEditingController();
   SignUp({super.key});
 
   @override
@@ -85,10 +88,12 @@ class SignUp extends StatelessWidget {
                             height: ScreenSize.screenHeight *
                                 UiSize.sizedBoxSmallPaddingHeight,
                           ),
-                          TextFormField(
-                            decoration: const InputDecoration(
-                              hintText: "Enter your email",
-                            ),
+                          CustomTextInput(
+                            textEditController: _emailController,
+                            hintTextString: 'Enter Email',
+                            inputType: InputType.Email,
+                            enableBorder: true,
+                            maxLength: 24,
                           ),
                           SizedBox(
                             height: ScreenSize.screenHeight *
@@ -107,10 +112,14 @@ class SignUp extends StatelessWidget {
                             height: ScreenSize.screenHeight *
                                 UiSize.sizedBoxSmallPaddingHeight,
                           ),
-                          TextFormField(
-                            decoration: const InputDecoration(
-                              hintText: "Enter Password",
-                            ),
+                          CustomTextInput(
+                            textEditController: _passwordController,
+                            hintTextString: 'Enter Password',
+                            inputType: InputType.Password,
+                            enableBorder: true,
+                            maxLength: 16,
+                            prefixIcon: Icon(Icons.lock,
+                                color: Theme.of(context).primaryColor),
                           ),
                           SizedBox(
                             height: ScreenSize.screenHeight *
@@ -129,10 +138,14 @@ class SignUp extends StatelessWidget {
                             height: ScreenSize.screenHeight *
                                 UiSize.sizedBoxSmallPaddingHeight,
                           ),
-                          TextFormField(
-                            decoration: const InputDecoration(
-                              hintText: "Conform password",
-                            ),
+                          CustomTextInput(
+                            textEditController: _rePasswordController,
+                            hintTextString: 'Conform Password',
+                            inputType: InputType.Password,
+                            enableBorder: true,
+                            maxLength: 16,
+                            prefixIcon: Icon(Icons.lock,
+                                color: Theme.of(context).primaryColor),
                           ),
                           SizedBox(
                             height:

@@ -24,7 +24,7 @@ class Category extends Equatable {
       id: 2,
       name: 'Burger',
       icon: '🍔',
-      color: 0xff3EC032,
+      color: 0xffCCF0C1,
     ),
     Category(
       id: 3,

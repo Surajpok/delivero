@@ -1,7 +1,8 @@
 import 'package:delivero/imports.dart';
-import 'package:flutter/material.dart';
 
 ThemeData appTheme() => ThemeData(
+      useMaterial3: true,
+      primaryColor: ColorName.primaryColor,
       scaffoldBackgroundColor: ColorName.backgroundColor,
       fontFamily: 'Montserrat',
       appBarTheme: const AppBarTheme(
