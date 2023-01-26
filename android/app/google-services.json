@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "410588161611",
+    "project_id": "ghardailosamma1",
+    "storage_bucket": "ghardailosamma1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410588161611:android:6b3d9cdbdbefaee1084fce",
+        "android_client_info": {
+          "package_name": "com.example.delivero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410588161611-der2m7ikcu8hhjj7glmqq23rlqhg98aa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmHkwTSS_5fy9UKdT6XPaFhFLZuToDVYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410588161611-der2m7ikcu8hhjj7glmqq23rlqhg98aa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "410588161611-00usio8qo650mj2oid1bndf6rbmus5sd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.delivero"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

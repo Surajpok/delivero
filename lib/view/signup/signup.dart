@@ -10,45 +10,47 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: SafeArea(
-        child: Column(
-          children: [
-            Row(
-              children: [
-                const Expanded(
-                  child: SizedBox(
-                    width: UiSize.sizedBoxWidth,
-                  ),
-                ),
-                Expanded(
-                  child: Image.asset(
-                    Assets.icons.icon.path,
-                    height: IconSizes.topIcon,
-                  ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/bottom_nav');
-                    },
-                    child: const Text(
-                      'skip',
-                      style: TextStyle(
-                          color: ColorName.textButtonColor,
-                          fontSize: FontSizes.subheading),
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: Paddings.content,
+          ),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  const Expanded(
+                    child: SizedBox(
+                      width: UiSize.sizedBoxWidth,
                     ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-                height: ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight),
-            ListView(
-              shrinkWrap: true,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 16.0, horizontal: Paddings.content),
-                  child: Column(
+                  Expanded(
+                    child: Image.asset(
+                      Assets.icons.icon.path,
+                      height: IconSizes.topIcon,
+                    ),
+                  ),
+                  Expanded(
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/bottom_nav');
+                      },
+                      child: const Text(
+                        'skip',
+                        style: TextStyle(
+                            color: ColorName.textButtonColor,
+                            fontSize: FontSizes.subheading),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                  height:
+                      ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight),
+              ListView(
+                shrinkWrap: true,
+                children: <Widget>[
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
@@ -187,10 +189,10 @@ class SignUp extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

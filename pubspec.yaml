@@ -24,6 +24,7 @@ dependencies:
   iconly: ^1.0.1
   expandable_text: ^2.3.0
   pinput: ^2.2.0
+  firebase_core: ^2.4.1
 
 dev_dependencies:
   flutter_test:
