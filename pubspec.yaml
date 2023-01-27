@@ -25,6 +25,7 @@ dependencies:
   expandable_text: ^2.3.0
   pinput: ^2.2.0
   firebase_core: ^2.4.1
+  firebase_auth: ^4.2.5
 
 dev_dependencies:
   flutter_test:
