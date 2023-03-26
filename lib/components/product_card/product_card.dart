@@ -32,8 +32,15 @@ class ProductCard extends StatelessWidget {
       decoration: const BoxDecoration(
         color: ColorName.white,
         borderRadius: BorderRadius.all(
-          Radius.circular(RadiusSize.cardBorderRadius),
+          Radius.circular(RadiusSize.buttonRadius),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: ColorName.secondaryAccent,
+            blurRadius: 1,
+            offset: Offset(0, 0), // Shadow position
+          ),
+        ],
       ),
       child: InkWell(
         onTap: onTap,
@@ -69,11 +76,14 @@ class ProductCard extends StatelessWidget {
                   height: 10,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         const Icon(
-                          Icons.star,
+                          MyIcons.star,
                           color: ColorName.gradientFirst,
                         ),
                         Text(
@@ -83,10 +93,6 @@ class ProductCard extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
-                    const Expanded(
-                      flex: 1,
-                      child: SizedBox(),
                     ),
                     Image.asset(
                       Assets.icons.heart.path,

@@ -30,6 +30,7 @@ class _BottomNavState extends State<BottomNav> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenSize.init(context);
     return Scaffold(
       extendBody: true,
       bottomNavigationBar: CircleNavBar(
@@ -89,6 +90,7 @@ class _BottomNavState extends State<BottomNav> {
       ),
       body: PageView(
         controller: pageController,
+        physics: NeverScrollableScrollPhysics(),
         onPageChanged: (v) {
           tabIndex = v;
         },

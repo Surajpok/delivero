@@ -3,10 +3,10 @@ import 'package:delivero/imports.dart';
 ThemeData appTheme() => ThemeData(
       useMaterial3: true,
       primaryColor: ColorName.primaryColor,
-      scaffoldBackgroundColor: ColorName.backgroundColor,
+      scaffoldBackgroundColor: ColorName.white,
       fontFamily: 'Montserrat',
       appBarTheme: const AppBarTheme(
-        color: ColorName.backgroundColor,
+        color: ColorName.white,
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
       ),

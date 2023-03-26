@@ -59,7 +59,7 @@ class RadiusSize {
 
   static const cardBorderRadius = 50.0;
 
-  static const counterBorderRadius = 100.0;
+  static const counterBorderRadius = 200.0;
 
   static const singleProductBorderRadius = 20.0;
 }
@@ -84,7 +84,7 @@ class UiSize {
   static const double singleProductCardWidth = 0.70;
 
   static const double productImageWidth = 0.45;
-  static const double productIconWidth = 0.04;
+  static const double productIconWidth = 0.045;
 
   static const double bottomNavHeight = 80;
 }

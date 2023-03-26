@@ -1,5 +1,5 @@
 import 'package:delivero/imports.dart';
-import 'package:delivero/model/category_model.dart';
+import 'package:delivero/models/category_model.dart';
 
 class CategoryPage extends StatelessWidget {
   const CategoryPage({super.key});
@@ -11,14 +11,14 @@ class CategoryPage extends StatelessWidget {
         const SizedBox(
           width: double.infinity,
           child: Text(
-            'Enjoy Delicious food',
+            'Enjoy Delicious Food',
             textAlign: TextAlign.left,
             style: TextStyle(
                 fontSize: FontSizes.headline1, fontWeight: FontWeight.w700),
           ),
         ),
         SizedBox(
-          height: ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight,
+          height: ScreenSize.screenHeight * UiSize.sizedBoxSmallPaddingHeight,
         ),
         SizedBox(
           height: ScreenSize.screenHeight * UiSize.categoryBoxHeight,
@@ -30,15 +30,24 @@ class CategoryPage extends StatelessWidget {
             itemBuilder: (context, index) {
               return Container(
                 width: ScreenSize.screenWidth * UiSize.categoryBoxWidth,
-                margin: const EdgeInsets.only(right: Margins.normal),
+                margin: const EdgeInsets.only(
+                    right: Margins.normal,
+                    top: Margins.minimum,
+                    bottom: Margins.minimum),
                 decoration: BoxDecoration(
                   border: Border.all(
-                    // color: Color(0xffF0CCC1),
                     color: Color(Category.categories[index].color),
                   ),
                   borderRadius: const BorderRadius.all(
                     Radius.circular(RadiusSize.categoryBorderRadius),
                   ),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: ColorName.secondaryAccent,
+                      blurRadius: 3,
+                      offset: Offset(0, 0), // Shadow position
+                    ),
+                  ],
                 ),
                 child: Material(
                   color: ColorName.white,
@@ -74,7 +83,7 @@ class CategoryPage extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: ScreenSize.screenHeight * UiSize.sizedBoxHeight,
+          height: ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight,
         ),
       ],
     );

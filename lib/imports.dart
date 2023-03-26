@@ -6,7 +6,7 @@ export 'package:delivero/components/buttons/elevated_button_primary.dart';
 export 'package:delivero/components/buttons/elevated_button_secondary.dart';
 export 'package:delivero/components/categories/category.dart';
 export 'package:delivero/components/popular/popular_page.dart';
-export 'package:delivero/components/product_card.dart';
+export 'package:delivero/components/product_card/product_card.dart';
 export 'package:delivero/components/buttons/text_button.dart';
 export 'package:delivero/components/bottom_nav/bottom_nav.dart';
 export 'package:delivero/constants/font_icons.dart';

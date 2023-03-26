@@ -4,6 +4,7 @@ import 'package:delivero/view/Forgot/forgot_password.dart';
 import 'package:delivero/view/SignUp/signup.dart';
 import 'package:delivero/view/cart/cart.dart';
 import 'package:delivero/view/login/login.dart';
+import 'package:delivero/view/login/phonesignin.dart';
 import 'package:delivero/view/otp/otp.dart';
 import 'package:delivero/view/payment/payment_details.dart';
 import 'package:delivero/view/payment/payment_success.dart';
@@ -46,13 +47,17 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => LoginPage(),
         );
+      case '/phone_signin':
+        return MaterialPageRoute(
+          builder: (context) => PhoneSignInPage(),
+        );
       case '/signup':
         return MaterialPageRoute(
           builder: (context) => SignUp(),
         );
       case '/otp':
         return MaterialPageRoute(
-          builder: (context) => const OtpScreen(),
+          builder: (context) => OtpScreen(),
         );
       case '/deliver':
         return MaterialPageRoute(

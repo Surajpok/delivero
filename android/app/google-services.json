@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "410588161611-der2m7ikcu8hhjj7glmqq23rlqhg98aa.apps.googleusercontent.com",
+          "client_id": "410588161611-bb82557ah31iv4jj1f3ljc68sjd8m49i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.delivero",
+            "certificate_hash": "72b29ce1adfbb8df3ad9bf7904e92793bc539b85"
+          }
+        },
+        {
+          "client_id": "410588161611-20oubsqotu4m29rfrsp8pmmhovsaondj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "410588161611-der2m7ikcu8hhjj7glmqq23rlqhg98aa.apps.googleusercontent.com",
+              "client_id": "410588161611-20oubsqotu4m29rfrsp8pmmhovsaondj.apps.googleusercontent.com",
               "client_type": 3
             },
             {

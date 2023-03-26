@@ -46,3 +46,34 @@ class Category extends Equatable {
     ),
   ];
 }
+
+// import 'package:cloud_firestore/cloud_firestore.dart';
+// import '../utils/dummy_url.dart';
+// import 'food_model.dart';
+
+// class Category {
+//   final String id;
+//   final String categoryName;
+//   final String photoUrl;
+//   final String categoryDescription;
+//   List<Food>? foods;
+
+//   Category({
+//     required this.id,
+//     required this.categoryName,
+//     required this.categoryDescription,
+//     required this.photoUrl,
+//   });
+
+//   static Category? fromDocument(DocumentSnapshot categorySnap) {
+//     if (!categorySnap.exists) return null;
+//     return Category(
+//       id: categorySnap.id,
+//       categoryName: categorySnap.get("categoryName"),
+//       photoUrl: categorySnap.get("photoUrl") != null
+//           ? categorySnap.get("photoUrl")
+//           : DummyUrl.PERSON,
+//       categoryDescription: categorySnap.get("categoryDescription"),
+//     );
+//   }
+// }

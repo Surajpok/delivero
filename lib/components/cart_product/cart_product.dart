@@ -13,6 +13,13 @@ class CartProduct extends StatelessWidget {
         borderRadius: BorderRadius.all(
           Radius.circular(RadiusSize.cardBorderRadius),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: ColorName.secondaryAccent,
+            blurRadius: 1,
+            offset: Offset(0, 0), // Shadow position
+          ),
+        ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -20,51 +27,71 @@ class CartProduct extends StatelessWidget {
         children: [
           Image.asset(
             Assets.images.burger.path,
-            height: IconSizes.topIcon,
+            height: IconSizes.avatar,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              Text(
-                "The Macdonalds",
-                style: TextStyle(
-                    fontSize: FontSizes.headline1,
-                    fontWeight: FontWeight.w700,
-                    color: ColorName.black),
-              ),
-              Text("Classic cheese burger"),
-              Text(
-                "23.99",
-                style: TextStyle(
-                  fontSize: FontSizes.headline2,
-                  fontWeight: FontWeight.w700,
-                  color: ColorName.gradientSecond,
+          Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                Expanded(
+                  child: Text(
+                    "The Macdonalds Classic Cheese Burger",
+                    overflow: TextOverflow.clip,
+                    style: TextStyle(
+                        fontSize: FontSizes.headline2,
+                        fontWeight: FontWeight.w700,
+                        color: ColorName.black),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          MyElevatedButton(
-            height: ScreenSize.screenHeight * 0.05,
-            width: ScreenSize.screenWidth * 0.10,
-            onPressed: () {},
-            borderRadius: BorderRadius.circular(RadiusSize.counterBorderRadius),
-            child: const Text('-'),
-          ),
-          const Text(
-            "1",
-            style: TextStyle(
-              fontSize: FontSizes.headline2,
-              fontWeight: FontWeight.w700,
+                SizedBox(
+                  child: Text(
+                    "Classic cheese",
+                    overflow: TextOverflow.clip,
+                  ),
+                ),
+                Text(
+                  "Rs. 23.99",
+                  style: TextStyle(
+                    fontSize: FontSizes.headline2,
+                    fontWeight: FontWeight.w700,
+                    color: ColorName.gradientSecond,
+                  ),
+                ),
+              ],
             ),
           ),
-          MyElevatedButton(
-            height: ScreenSize.screenHeight * 0.05,
-            width: ScreenSize.screenWidth * 0.10,
-            onPressed: () {},
-            borderRadius: BorderRadius.circular(RadiusSize.counterBorderRadius),
-            child: const Text('+'),
-          ),
+          SizedBox(
+            width: ScreenSize.screenWidth * 0.26,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                MyElevatedButton(
+                  height: ScreenSize.screenHeight * 0.047,
+                  width: ScreenSize.screenWidth * 0.10,
+                  onPressed: () {},
+                  borderRadius:
+                      BorderRadius.circular(RadiusSize.counterBorderRadius),
+                  child: const Text('-'),
+                ),
+                const Text(
+                  "1",
+                  style: TextStyle(
+                    fontSize: FontSizes.headline2,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                MyElevatedButton(
+                  height: ScreenSize.screenHeight * 0.047,
+                  width: ScreenSize.screenWidth * 0.10,
+                  onPressed: () {},
+                  borderRadius:
+                      BorderRadius.circular(RadiusSize.counterBorderRadius),
+                  child: const Text('+'),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

@@ -16,7 +16,6 @@ dependencies:
   flare_splash_screen: ^4.0.0
   card_swiper: ^1.0.4
   http: ^0.13.4
-  flutter_bloc: ^8.1.1
   lottie: ^2.0.0
   smooth_page_indicator: ^1.0.0+2
   equatable: ^2.0.5
@@ -26,6 +25,8 @@ dependencies:
   pinput: ^2.2.0
   firebase_core: ^2.4.1
   firebase_auth: ^4.2.5
+  provider: ^6.0.5
+  cloud_firestore: ^4.4.3
 
 dev_dependencies:
   flutter_test:

@@ -80,7 +80,9 @@ class _CustomTextInputState extends State<CustomTextInput> {
       borderRadius:
           BorderRadius.all(Radius.circular(widget.cornerRadius ?? 15.0)),
       borderSide: BorderSide(
-          width: 2, color: widget.themeColor ?? Theme.of(context).primaryColor),
+        width: 1,
+        color: widget.themeColor ?? Theme.of(context).primaryColor,
+      ),
       gapPadding: 2,
     );
   }
@@ -238,33 +240,3 @@ class _CustomTextInputState extends State<CustomTextInput> {
 }
 
 enum InputType { Default, Email, Number, Password, PaymentCard }
-
-
-// class MyFormFeild extends StatelessWidget {
-//   final BorderRadiusGeometry? borderRadius;
-//   final double? width;
-//   final double? height;
-//   final String? hintText;
-//   final String? labelText;
-
-//   const MyFormFeild({
-//     Key? key,
-//     this.hintText,
-//     this.labelText,
-//     this.borderRadius,
-//     this.width,
-//     this.height,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     final borderRadius = this.borderRadius ?? BorderRadius.circular(0);
-//     return TextFormField(
-//       decoration: InputDecoration(
-//         hintText: hintText,
-//         labelText: labelText,
-//         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-//       ),
-//     );
-//   }
-// }

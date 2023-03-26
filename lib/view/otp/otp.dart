@@ -24,22 +24,22 @@ class _OtpScreenState extends State<OtpScreen> {
       ),
     );
 
-    final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: ColorName.secondaryAccent),
-      borderRadius: BorderRadius.circular(4),
-    );
+    // final focusedPinTheme = defaultPinTheme.copyDecorationWith(
+    //   border: Border.all(color: ColorName.secondaryAccent),
+    //   borderRadius: BorderRadius.circular(4),
+    // );
 
-    final submittedPinTheme = defaultPinTheme.copyWith(
-      decoration: defaultPinTheme.decoration?.copyWith(
-        color: ColorName.white,
-      ),
-    );
+    // final submittedPinTheme = defaultPinTheme.copyWith(
+    //   decoration: defaultPinTheme.decoration?.copyWith(
+    //     color: ColorName.white,
+    //   ),
+    // );
 
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(),
       body: Container(
-        margin: EdgeInsets.only(left: 25, right: 25),
+        margin: const EdgeInsets.only(left: 25, right: 25),
         alignment: Alignment.center,
         child: SingleChildScrollView(
           child: Column(
@@ -85,7 +85,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 // submittedPinTheme: submittedPinTheme,
 
                 showCursor: true,
-                onCompleted: (pin) => print(pin),
+                // onCompleted: (pin) => print(pin),
               ),
               SizedBox(
                 height: ScreenSize.screenHeight * UiSize.sizedBoxHeight,

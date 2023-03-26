@@ -1,5 +1,5 @@
 import 'package:delivero/imports.dart';
-import 'package:delivero/model/popular_model.dart';
+import 'package:delivero/models/popular_model.dart';
 
 class PopularPage extends StatefulWidget {
   const PopularPage({super.key});
@@ -19,7 +19,7 @@ class _PopularPageState extends State<PopularPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             Text(
-              "Popular Restaursnts",
+              "Popular Foods",
               style: TextStyle(
                 fontSize: FontSizes.subheading,
                 fontWeight: FontWeight.w700,
@@ -36,10 +36,8 @@ class _PopularPageState extends State<PopularPage> {
           ],
         ),
         SizedBox(
-          height: ScreenSize.screenHeight * UiSize.sizedBoxHeight,
+          height: ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight,
         ),
-
-//here
 
         SizedBox(
           height: 300,
@@ -50,7 +48,8 @@ class _PopularPageState extends State<PopularPage> {
             itemBuilder: (context, index) {
               return Container(
                 width: 220,
-                margin: const EdgeInsets.only(right: 20),
+                margin: const EdgeInsets.only(
+                    right: 20, left: 5, top: 10, bottom: 10),
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(

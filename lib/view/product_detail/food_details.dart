@@ -57,19 +57,6 @@ Widget _buildBody(BuildContext context) {
           Container(
             height: ScreenSize.screenHeight * UiSize.singleProductCardHeight,
             width: ScreenSize.screenWidth * UiSize.singleProductCardWidth,
-            decoration: BoxDecoration(
-              color: ColorName.white,
-              borderRadius:
-                  BorderRadius.circular(RadiusSize.singleProductBorderRadius),
-              boxShadow: const [
-                BoxShadow(
-                  color: ColorName.secondaryAccent,
-                  blurRadius: 20.0,
-                  spreadRadius: 2.0,
-                  offset: Offset(0.0, 0.0),
-                ),
-              ],
-            ),
             child: SizedBox(
               child: Image.asset(
                 Assets.images.burger.path,
@@ -80,106 +67,118 @@ Widget _buildBody(BuildContext context) {
           SizedBox(
             height: ScreenSize.screenHeight * UiSize.sizedBoxHeight,
           ),
-          Container(
-            width: ScreenSize.screenWidth * 0.28,
-            height: ScreenSize.screenHeight * 0.07,
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                  colors: [ColorName.gradientFirst, ColorName.gradientSecond]),
-              borderRadius: BorderRadius.circular(RadiusSize.roundButtonRadius),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                InkWell(
-                  onTap: () {},
-                  splashColor: ColorName.tertaryAccent,
-                  child: const Icon(
-                    Icons.remove,
-                    color: ColorName.white,
-                    size: IconSizes.smallIcon,
-                  ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                "Cheese Burger",
+                style: TextStyle(
+                  fontSize: FontSizes.headline1,
+                  fontWeight: FontWeight.w700,
                 ),
-                const Text(
-                  "2",
-                  style: TextStyle(
-                    fontSize: FontSizes.placeholder,
-                    fontWeight: FontWeight.w700,
-                    color: ColorName.white,
-                  ),
+              ),
+              Container(
+                width: ScreenSize.screenWidth * 0.28,
+                height: ScreenSize.screenHeight * 0.06,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(colors: [
+                    ColorName.gradientFirst,
+                    ColorName.gradientSecond
+                  ]),
+                  borderRadius:
+                      BorderRadius.circular(RadiusSize.roundButtonRadius),
                 ),
-                InkWell(
-                  onTap: () {},
-                  splashColor: Colors.green,
-                  child: const Icon(
-                    MyIcons.add,
-                    color: ColorName.white,
-                    size: IconSizes.smallIcon,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    InkWell(
+                      onTap: () {},
+                      splashColor: ColorName.tertaryAccent,
+                      child: const Icon(
+                        Icons.remove,
+                        color: ColorName.white,
+                        size: IconSizes.smallIcon,
+                      ),
+                    ),
+                    const Text(
+                      "2",
+                      style: TextStyle(
+                        fontSize: FontSizes.placeholder,
+                        fontWeight: FontWeight.w700,
+                        color: ColorName.white,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      splashColor: Colors.green,
+                      child: const Icon(
+                        MyIcons.add,
+                        color: ColorName.white,
+                        size: IconSizes.smallIcon,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: ScreenSize.screenHeight * UiSize.sizedBoxHeight,
-          ),
-          const Text(
-            "Big boys cheese burger",
-            style: TextStyle(
-              fontSize: FontSizes.headline1,
-              fontWeight: FontWeight.w700,
-            ),
+              ),
+            ],
           ),
           const SizedBox(
-            height: Paddings.minimum,
+            height: Paddings.content,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
-                flex: 1,
-                child: Row(
-                  children: const [
-                    Icon(
-                      MyIcons.star,
-                      color: ColorName.gradientSecond,
-                    ),
-                    Text(
-                      '4+',
-                      style: TextStyle(
-                        fontSize: FontSizes.headline3,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Row(
-                  children: const [
-                    Icon(
-                      MyIcons.fire,
-                      color: ColorName.gradientSecond,
-                    ),
-                    Text(
-                      '300 cal',
-                      style: TextStyle(
-                        fontSize: FontSizes.headline3,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Row(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Icon(
-                    MyIcons.clock,
-                    color: ColorName.gradientSecond,
-                  ),
                   Text(
-                    '5-10 min',
+                    'Size',
                     style: TextStyle(
                       fontSize: FontSizes.headline3,
+                    ),
+                  ),
+                  Text(
+                    'Medium',
+                    style: TextStyle(
+                      fontSize: FontSizes.headline2,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Calories',
+                    style: TextStyle(
+                      fontSize: FontSizes.headline3,
+                    ),
+                  ),
+                  Text(
+                    '150 Kcal',
+                    style: TextStyle(
+                      fontSize: FontSizes.headline2,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Cooking',
+                    style: TextStyle(
+                      fontSize: FontSizes.headline3,
+                    ),
+                  ),
+                  Text(
+                    '5-10 Min',
+                    style: TextStyle(
+                      fontSize: FontSizes.headline2,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                 ],
@@ -249,26 +248,58 @@ Widget _buildBody(BuildContext context) {
 
 Widget _buldFloatBar(context) {
   return Positioned(
-    bottom: 0,
+    bottom: 10,
     left: 0,
     right: 0,
-    child: Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: Paddings.content),
-          child: SizedBox(
+    child: Container(
+      margin: const EdgeInsets.symmetric(horizontal: Margins.normal),
+      padding: const EdgeInsets.symmetric(
+          vertical: Paddings.content, horizontal: Paddings.content),
+      decoration: BoxDecoration(
+        boxShadow: const [
+          BoxShadow(
+            color: ColorName.secondaryAccent,
+            blurRadius: 50,
+            offset: Offset(1, 1), // Shadow position
+          ),
+        ],
+        borderRadius: BorderRadius.circular(
+          (RadiusSize.buttonRadius),
+        ),
+        color: ColorName.white,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                "Total",
+                style: TextStyle(
+                  fontSize: FontSizes.headline3,
+                ),
+              ),
+              Text(
+                'Rs. 1245',
+                style: TextStyle(
+                    fontSize: FontSizes.headline1, fontWeight: FontWeight.w700),
+              ),
+            ],
+          ),
+          SizedBox(
             child: MyElevatedButton(
-              width: double.infinity,
+              width: ScreenSize.screenWidth * 0.45,
               height: ScreenSize.screenHeight * 0.07,
               onPressed: () {
-                Navigator.pushNamed(context, '/cart');
+                Navigator.pushNamed(context, '/deliver');
               },
-              borderRadius: BorderRadius.circular(RadiusSize.buttonRadius),
-              child: const Text('Add to cart'),
+              borderRadius: BorderRadius.circular(RadiusSize.roundButtonRadius),
+              child: const Text('Place Order'),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     ),
   );
 }
