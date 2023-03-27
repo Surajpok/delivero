@@ -19,7 +19,7 @@ class _PopularPageState extends State<PopularPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             Text(
-              "Popular Foods",
+              "Popular Restaurants",
               style: TextStyle(
                 fontSize: FontSizes.subheading,
                 fontWeight: FontWeight.w700,

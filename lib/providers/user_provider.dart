@@ -4,7 +4,6 @@ import '../models/user_model.dart';
 
 class UserProvider with ChangeNotifier {
   User? _user;
-
   final FirebaseAuthMethods _authMethods = FirebaseAuthMethods();
 
   User get getUser => _user!;

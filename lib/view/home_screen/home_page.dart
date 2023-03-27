@@ -1,5 +1,6 @@
 import 'package:delivero/components/header/header_drawer.dart';
 import 'package:delivero/imports.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         body: CustomScrollView(
           slivers: <Widget>[
-            const SliverPadding(
+            SliverPadding(
               padding: EdgeInsets.only(
                 left: Paddings.minimum,
                 right: Paddings.minimum,
@@ -23,7 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
               sliver: SliverAppBar(
                 // automaticallyImplyLeading: false,
                 pinned: true,
-                flexibleSpace: TopMenu(),
+                flexibleSpace: TopMenu(
+                  uid: FirebaseAuth.instance.currentUser!.uid,
+                ),
               ),
             ),
             SliverPadding(
@@ -37,7 +40,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        drawer: HeaderDrawer(),
+        drawer: HeaderDrawer(
+          uid: FirebaseAuth.instance.currentUser!.uid,
+        ),
       ),
     );
   }

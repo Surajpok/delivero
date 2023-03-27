@@ -1,5 +1,6 @@
 import 'package:delivero/imports.dart';
 import 'package:expandable_text/expandable_text.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class FoodDetails extends StatefulWidget {
   const FoodDetails({super.key});
@@ -17,7 +18,7 @@ class _FoodDetailsState extends State<FoodDetails> {
           children: [
             CustomScrollView(
               slivers: <Widget>[
-                const SliverPadding(
+                SliverPadding(
                   padding: EdgeInsets.only(
                     left: Paddings.minimum,
                     right: Paddings.minimum,
@@ -25,7 +26,9 @@ class _FoodDetailsState extends State<FoodDetails> {
                   sliver: SliverAppBar(
                     automaticallyImplyLeading: false,
                     pinned: true,
-                    flexibleSpace: TopMenu(),
+                    flexibleSpace: TopMenu(
+                      uid: FirebaseAuth.instance.currentUser!.uid,
+                    ),
                     // MainAppBar.defaultAppBar(context),
                   ),
                 ),

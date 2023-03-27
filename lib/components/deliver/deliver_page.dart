@@ -1,4 +1,5 @@
 import 'package:delivero/imports.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class DeliverPage extends StatefulWidget {
   const DeliverPage({super.key});
@@ -16,7 +17,7 @@ class _DeliverPageState extends State<DeliverPage> {
           children: [
             CustomScrollView(
               slivers: <Widget>[
-                const SliverPadding(
+                SliverPadding(
                   padding: EdgeInsets.only(
                     left: Paddings.minimum,
                     right: Paddings.minimum,
@@ -24,7 +25,9 @@ class _DeliverPageState extends State<DeliverPage> {
                   sliver: SliverAppBar(
                     automaticallyImplyLeading: false,
                     pinned: true,
-                    flexibleSpace: TopMenu(),
+                    flexibleSpace: TopMenu(
+                      uid: FirebaseAuth.instance.currentUser!.uid,
+                    ),
                     // MainAppBar.defaultAppBar(context),
                   ),
                 ),
