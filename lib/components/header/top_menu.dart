@@ -77,14 +77,16 @@ class _TopMenuState extends State<TopMenu> {
             borderRadius:
                 BorderRadius.circular(RadiusSize.categoryBorderRadius),
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            child: InkWell(
-              onTap: () {},
-              child: Image.network(
-                userData['photoUrl'],
-                fit: BoxFit.contain,
-                width: IconSizes.avatar,
-              ),
-            ),
+            child: isLoading
+                ? CircularProgressIndicator()
+                : InkWell(
+                    onTap: () {},
+                    child: Image.network(
+                      userData['photoUrl'],
+                      fit: BoxFit.contain,
+                      width: IconSizes.categoryItem,
+                    ),
+                  ),
           ),
         ],
       );
