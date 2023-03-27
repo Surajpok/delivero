@@ -72,7 +72,16 @@ class _FeaturedFoodsPageState extends State<FeaturedFoodsPage> {
                       ),
                       child: FoodCard(
                         onTap: () {
-                          Navigator.pushNamed(context, '/details');
+                          Navigator.pushNamed(
+                            context,
+                            '/details',
+                            arguments: {
+                              'title': snapshot.data!.docs[index].get('name'),
+                              'desc': snapshot.data!.docs[index].get('desc'),
+                              'image': snapshot.data!.docs[index].get('image'),
+                              'star': snapshot.data!.docs[index].get('rating'),
+                            },
+                          );
                         },
                         title: snapshot.data!.docs[index].get('name'),
                         desc: snapshot.data!.docs[index].get('desc'),
