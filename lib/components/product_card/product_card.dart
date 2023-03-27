@@ -7,7 +7,7 @@ class ProductCard extends StatelessWidget {
   final String image;
   final String title;
   final String desc;
-  final double star;
+  final num star;
   final VoidCallback? onTap;
   // final Widget child;
 
@@ -47,9 +47,13 @@ class ProductCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Image.asset(
-              image,
-              width: imagewidth,
+            Container(
+              height: 123,
+              child: Image.network(
+                image,
+                width: imagewidth,
+                fit: BoxFit.cover,
+              ),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

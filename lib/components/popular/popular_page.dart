@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:delivero/imports.dart';
 import 'package:delivero/models/popular_model.dart';
 
@@ -41,35 +42,50 @@ class _PopularPageState extends State<PopularPage> {
 
         SizedBox(
           height: 300,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: PopularProduct.products.length,
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return Container(
-                width: 220,
-                margin: const EdgeInsets.only(
-                    right: 20, left: 5, top: 10, bottom: 10),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(50),
-                  ),
-                ),
-                child: ProductCard(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/details');
+          child: StreamBuilder(
+              stream: FirebaseFirestore.instance
+                  .collection('restaurants')
+                  .where('featured', isEqualTo: true)
+                  .snapshots(),
+              builder: (context,
+                  AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+
+                return ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: snapshot.data!.docs.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 220,
+                      margin: const EdgeInsets.only(
+                          right: 20, left: 5, top: 10, bottom: 10),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50),
+                        ),
+                      ),
+                      child: ProductCard(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/details');
+                        },
+                        title: snapshot.data!.docs[index].get('name'),
+                        desc: snapshot.data!.docs[index].get('desc'),
+                        image: snapshot.data!.docs[index].get('logo'),
+                        star: snapshot.data!.docs[index].get('rating'),
+                        imagewidth:
+                            ScreenSize.screenWidth * UiSize.productImageWidth,
+                        width: 0,
+                      ),
+                    );
                   },
-                  title: PopularProduct.products[index].title,
-                  desc: PopularProduct.products[index].desc,
-                  image: PopularProduct.products[index].image,
-                  star: PopularProduct.products[index].star,
-                  imagewidth: ScreenSize.screenWidth * UiSize.productImageWidth,
-                  width: 0,
-                ),
-              );
-            },
-          ),
+                );
+              }),
         ),
 
 //tohere
