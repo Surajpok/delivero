@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:delivero/imports.dart';
-import 'package:delivero/models/popular_model.dart';
 
 class PopularPage extends StatefulWidget {
   const PopularPage({super.key});
@@ -27,7 +26,7 @@ class _PopularPageState extends State<PopularPage> {
               ),
             ),
             Text(
-              "View all(29)",
+              "View all(15)",
               style: TextStyle(
                 fontSize: FontSizes.subheading,
                 fontWeight: FontWeight.w400,
@@ -37,9 +36,8 @@ class _PopularPageState extends State<PopularPage> {
           ],
         ),
         SizedBox(
-          height: ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight,
+          height: ScreenSize.screenHeight * UiSize.sizedBoxSmallPaddingHeight,
         ),
-
         SizedBox(
           height: 300,
           child: StreamBuilder(
@@ -70,7 +68,7 @@ class _PopularPageState extends State<PopularPage> {
                           Radius.circular(50),
                         ),
                       ),
-                      child: ProductCard(
+                      child: RestaurantCard(
                         onTap: () {
                           Navigator.pushNamed(context, '/details');
                         },
@@ -87,8 +85,9 @@ class _PopularPageState extends State<PopularPage> {
                 );
               }),
         ),
-
-//tohere
+        SizedBox(
+          height: ScreenSize.screenHeight * UiSize.sizedBoxPaddingHeight,
+        ),
       ],
     );
   }

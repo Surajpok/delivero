@@ -84,6 +84,7 @@ class UiSize {
   static const double singleProductCardWidth = 0.70;
 
   static const double productImageWidth = 0.45;
+  static const double featuredFoodImageWidth = 0.8;
   static const double productIconWidth = 0.045;
 
   static const double bottomNavHeight = 80;

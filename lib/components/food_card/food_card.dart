@@ -1,6 +1,6 @@
 import 'package:delivero/imports.dart';
 
-class RestaurantCard extends StatelessWidget {
+class FoodCard extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final double width;
   final double imagewidth;
@@ -11,7 +11,7 @@ class RestaurantCard extends StatelessWidget {
   final VoidCallback? onTap;
   // final Widget child;
 
-  const RestaurantCard({
+  const FoodCard({
     Key? key,
     required this.onTap,
     this.borderRadius,

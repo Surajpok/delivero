@@ -1,5 +1,6 @@
 import 'package:delivero/components/header/header_drawer.dart';
 import 'package:delivero/imports.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -49,8 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildBody(BuildContext context) {
     return Column(
-      children: const [
+      children: [
         CategoryPage(),
+        FeaturedFoodsPage(),
         PopularPage(),
       ],
     );
