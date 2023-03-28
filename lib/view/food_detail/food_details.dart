@@ -1,9 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:delivero/imports.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FoodDetails extends StatefulWidget {
-  const FoodDetails({super.key});
+  final DocumentSnapshot<Map<String, dynamic>> documentSnapshot;
+  const FoodDetails({super.key, required this.documentSnapshot});
 
   @override
   State<FoodDetails> createState() => _FoodDetailsState();
@@ -12,12 +14,6 @@ class FoodDetails extends StatefulWidget {
 class _FoodDetailsState extends State<FoodDetails> {
   @override
   Widget build(BuildContext context) {
-    final Map<String, dynamic>? args =
-        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
-    final String title = args?['title'] ?? 'Burger';
-    final String desc = args?['desc'] ?? '';
-    final String image = args?['image'] ?? '';
-    final double star = args?['star'] ?? 0;
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -43,22 +39,22 @@ class _FoodDetailsState extends State<FoodDetails> {
                   sliver: SliverList(
                     delegate: SliverChildBuilderDelegate(
                       ((context, index) =>
-                          _buildBody(context, title, desc, image, star)),
+                          _buildBody(context, widget.documentSnapshot)),
                       childCount: 1,
                     ),
                   ),
                 ),
               ],
             ),
-            _buldFloatBar(context),
+            _buldFloatBar(context, widget.documentSnapshot),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildBody(BuildContext context, String title, String desc,
-      String image, double star) {
+  Widget _buildBody(BuildContext context,
+      DocumentSnapshot<Map<String, dynamic>> documentSnapshot) {
     return Column(
       children: [
         Column(
@@ -66,11 +62,11 @@ class _FoodDetailsState extends State<FoodDetails> {
           children: [
             Container(
               height: ScreenSize.screenHeight * UiSize.singleProductCardHeight,
-              width: ScreenSize.screenWidth * UiSize.singleProductCardWidth,
+              width: double.maxFinite,
               child: SizedBox(
-                child: Image.asset(
-                  Assets.images.burger.path,
-                  fit: BoxFit.contain,
+                child: Image.network(
+                  documentSnapshot.get('image'),
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -81,7 +77,7 @@ class _FoodDetailsState extends State<FoodDetails> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  title,
+                  documentSnapshot.get('name'),
                   style: TextStyle(
                     fontSize: FontSizes.headline1,
                     fontWeight: FontWeight.w700,
@@ -198,19 +194,25 @@ class _FoodDetailsState extends State<FoodDetails> {
             const SizedBox(
               height: Paddings.content,
             ),
-            const ExpandableText(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur',
-              style: TextStyle(
-                fontSize: FontSizes.headline3,
+            Container(
+              constraints: BoxConstraints(
+                minHeight: 150,
               ),
-              expandText: 'more',
-              collapseText: 'view less',
-              maxLines: 4,
-              linkStyle: TextStyle(
-                  color: ColorName.gradientSecond, fontWeight: FontWeight.w700),
+              child: ExpandableText(
+                documentSnapshot.get('desc'),
+                style: TextStyle(
+                  fontSize: FontSizes.headline3,
+                ),
+                expandText: 'See More',
+                collapseText: 'See Less',
+                maxLines: 5,
+                linkStyle: TextStyle(
+                    color: ColorName.gradientSecond,
+                    fontWeight: FontWeight.w700),
+              ),
             ),
             const SizedBox(
-              height: Paddings.normal,
+              height: Paddings.content,
             ),
             SizedBox(
               height: ScreenSize.screenHeight * 0.075,
@@ -256,7 +258,8 @@ class _FoodDetailsState extends State<FoodDetails> {
     );
   }
 
-  Widget _buldFloatBar(context) {
+  Widget _buldFloatBar(
+      context, DocumentSnapshot<Map<String, dynamic>> documentSnapshot) {
     return Positioned(
       bottom: 0,
       left: 0,
@@ -283,7 +286,7 @@ class _FoodDetailsState extends State<FoodDetails> {
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
                   "Total",
                   style: TextStyle(
@@ -291,7 +294,7 @@ class _FoodDetailsState extends State<FoodDetails> {
                   ),
                 ),
                 Text(
-                  'Rs. 1245',
+                  "Rs. " + documentSnapshot.get("price").toString(),
                   style: TextStyle(
                       fontSize: FontSizes.headline1,
                       fontWeight: FontWeight.w700),

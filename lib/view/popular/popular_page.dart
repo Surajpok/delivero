@@ -58,6 +58,8 @@ class _PopularPageState extends State<PopularPage> {
                   itemCount: snapshot.data!.docs.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
+                    final DocumentSnapshot documentSnapshot =
+                        snapshot.data!.docs[index];
                     return Container(
                       width: 220,
                       margin: const EdgeInsets.only(
@@ -70,12 +72,13 @@ class _PopularPageState extends State<PopularPage> {
                       ),
                       child: RestaurantCard(
                         onTap: () {
-                          Navigator.pushNamed(context, '/details');
+                          Navigator.pushNamed(context, '/restaurant-details',
+                              arguments: documentSnapshot);
                         },
-                        title: snapshot.data!.docs[index].get('name'),
-                        desc: snapshot.data!.docs[index].get('desc'),
-                        image: snapshot.data!.docs[index].get('logo'),
-                        star: snapshot.data!.docs[index].get('rating'),
+                        title: documentSnapshot.get('name'),
+                        desc: documentSnapshot.get('desc'),
+                        image: documentSnapshot.get('logo'),
+                        star: documentSnapshot.get('rating'),
                         imagewidth:
                             ScreenSize.screenWidth * UiSize.productImageWidth,
                         width: 0,

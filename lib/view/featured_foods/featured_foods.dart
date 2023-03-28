@@ -60,6 +60,8 @@ class _FeaturedFoodsPageState extends State<FeaturedFoodsPage> {
                   itemCount: snapshot.data!.docs.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
+                    final DocumentSnapshot documentSnapshot =
+                        snapshot.data!.docs[index];
                     return Container(
                       width: 320,
                       margin: const EdgeInsets.only(
@@ -72,21 +74,13 @@ class _FeaturedFoodsPageState extends State<FeaturedFoodsPage> {
                       ),
                       child: FoodCard(
                         onTap: () {
-                          Navigator.pushNamed(
-                            context,
-                            '/details',
-                            arguments: {
-                              'title': snapshot.data!.docs[index].get('name'),
-                              'desc': snapshot.data!.docs[index].get('desc'),
-                              'image': snapshot.data!.docs[index].get('image'),
-                              'star': snapshot.data!.docs[index].get('rating'),
-                            },
-                          );
+                          Navigator.pushNamed(context, '/details',
+                              arguments: documentSnapshot);
                         },
-                        title: snapshot.data!.docs[index].get('name'),
-                        desc: snapshot.data!.docs[index].get('desc'),
-                        image: snapshot.data!.docs[index].get('image'),
-                        star: snapshot.data!.docs[index].get('rating'),
+                        title: documentSnapshot.get('name'),
+                        desc: documentSnapshot.get('desc'),
+                        image: documentSnapshot.get('image'),
+                        price: documentSnapshot.get('price'),
                         imagewidth: ScreenSize.screenWidth *
                             UiSize.featuredFoodImageWidth,
                         width: 0,

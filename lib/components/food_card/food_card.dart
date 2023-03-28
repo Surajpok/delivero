@@ -7,7 +7,7 @@ class FoodCard extends StatelessWidget {
   final String image;
   final String title;
   final String desc;
-  final num star;
+  final num price;
   final VoidCallback? onTap;
   // final Widget child;
 
@@ -21,7 +21,7 @@ class FoodCard extends StatelessWidget {
     required this.title,
     required this.desc,
     required this.image,
-    required this.star,
+    required this.price,
   }) : super(key: key);
 
   @override
@@ -83,20 +83,11 @@ class FoodCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        const Icon(
-                          MyIcons.star,
-                          color: ColorName.gradientFirst,
-                        ),
-                        Text(
-                          star.toString(),
-                          style: const TextStyle(
-                            fontSize: FontSizes.headline3,
-                          ),
-                        ),
-                      ],
+                    Text(
+                      "Rs. " + price.toString(),
+                      style: TextStyle(
+                          fontSize: FontSizes.headline2,
+                          fontWeight: FontWeight.w700),
                     ),
                     Image.asset(
                       Assets.icons.heart.path,
